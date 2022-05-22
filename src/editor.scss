@@ -1,0 +1,52 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ */
+.fnugg-resorts-controls label {
+	margin-bottom: 8px;
+	font-weight: 600;
+	display: block;
+}
+.fnugg-resorts-controls .inputwrapper {
+	position: relative;
+}
+.fnugg-resorts-controls .inputwrapper input {
+	width: 100%;
+    padding: 9px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+}
+.fnugg-resorts-controls .inputwrapper .dashicon {
+	position: absolute;
+	top: 8px;
+	right: 5px;
+	cursor: pointer;
+	z-index: 1000;
+}
+.fnugg-resorts-controls .fnugg-list-menu {
+	background-color: #fff;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	margin: 5px;
+}
+.fnugg-resorts-controls .fnugg-list-menu li.fnugg-list-item {
+	margin: 0px;
+}
+.fnugg-resorts-controls .fnugg-list-menu li .fnugg-list-item-label {
+	color: #000;
+	font-size: 14px;	
+	background-color: #fff;
+	border-bottom: 1px solid #f1f1f1;
+    display: block;
+    padding: 10px;
+	margin: 0;
+	text-decoration: none;
+}
+.fnugg-resorts-controls .fnugg-list-menu li .fnugg-list-item-label:hover {
+	background-color: rgb(232 232 232 / 35%);
+}
+p.fnugg-alert {
+	background-color: #06060663;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

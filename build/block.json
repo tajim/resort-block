@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "awesome-blocks/fnugg-resorts",
+	"version": "0.1.0",
+	"title": "Fnugg Resorts",
+	"category": "widgets",
+	"icon": "location-alt",
+	"description": "Awesome block that shows Ski Resort data from Fnugg.no AP",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"content": {
+			"type": "object"
+		},
+		"selected_ski": {
+			"type": "string"
+		},
+	   	"blockId": {
+		  "type": "string"
+	   	},
+	   	"skicount": {
+		  "type": "number"
+	   	}		
+	},	
+	"textdomain": "fnugg-resorts",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
