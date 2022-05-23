@@ -33,5 +33,4 @@ registerBlockType('awesome-blocks/fnugg-resorts', {
 	/**
 	 * Save not required because this a dynamic block
 	 */
-	
 });

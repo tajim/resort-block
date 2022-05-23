@@ -112,11 +112,10 @@ if ( ! class_exists( 'Fnugg_API_Wrapper' ) ) :
 			$fnugg_last_updated = $date->format('d.m.Y - H:i');
 			
 			ob_start();
-			include('resort-render-markup.php');
-			$content = ob_get_contents();
-			ob_end_clean();
-			return $content;
-			ob_end_flush();
+			
+				include('resort-render-markup.php');									
+			
+			return ob_get_clean();
 			
 			
 		}

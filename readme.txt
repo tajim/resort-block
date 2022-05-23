@@ -1,8 +1,8 @@
-=== Wp Resorts ===
-Contributors:     tajim
+=== Fnugg Resorts ===
+Contributors:      tajim
 Tags:              block
 Tested up to:      5.9
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,8 +25,10 @@ Fnugg Resorts is a custom WP block which shows weather data for ski resosts and 
 Once the plugin has been activated. Go to your page, click the [+] icon to add a block and search for `Fnugg Resorts`. Once the block has been added, search for a ski resorts in the block setting sidebar and select the one you would like to show.
 
 == Changelog ==
+= 1.0.1 =
+* Fixed Lint errors.
 
-= 0.1.0 =
+= 1.0.0 =
 * Initial Release
 
 == Resources ==

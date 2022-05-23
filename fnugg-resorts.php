@@ -10,7 +10,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       fnugg-resorts
  *
- * @package           awesome-blocks
+ * @package           fnugg-resorts
  */
 
 /**
@@ -22,43 +22,15 @@
  */
 
 
-function fnugg_resorts_block_init() {
-	register_block_type( 
-		__DIR__ . '/build',
-		array(
-			'render_callback' => 'fnugg_block_render_callback',
-			'attributes' => array(
-				"content" => array(
-					"type" => "object"
-				),				
-				'selected_ski' => array(
-					'type' => 'string'
-				),
-				"blockId" => array(
-				  "type" => "string"
-				),
-				"skicount" => array(
-				  "type" => "number"
-				)				
-			)					
-		)		
-	);
-}
-add_action( 'init', 'fnugg_resorts_block_init' );
-
-function fnugg_block_render_callback( $attr, $content ) {	
-		
-	if (isset($attr['selected_ski'])) {
-		$selected_ski_ed =  $attr['selected_ski'];
-		$fnugg = new Fnugg_API_Wrapper();	
-		return $fnugg->fnugg_render($selected_ski_ed);		
-	}		
-	elseif ( current_user_can( 'edit_posts' ) ) {
-		return '<p class="fnugg-alert">'.__('Please select a resort.', 'fnugg-resorts').'</p>';		 
-	}	
-	else {
-	 	// show nothing
-	}
+// If this file is called directly, abort
+if ( ! defined ( 'WPINC' )) {
+	die;
 }
 
-require_once 'inc/fnugg-api-class.php'; // Fnugg API Middleware
+define( 'FNUGG_RESORTS_VERSION', '1.0.0' );
+define( 'FNUGG_RESORTS_URL', untrailingslashit( plugins_url(  '', __FILE__ ) ) );
+define( 'FNUGG_RESORTS_PATH', dirname( __FILE__ ) );
+
+/* The core plugin file that is used to run the entire plugin*/
+require_once FNUGG_RESORTS_PATH . '/inc/fnugg-init.php';
+require_once FNUGG_RESORTS_PATH . '/inc/fnugg-api-class.php';
